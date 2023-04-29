@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "face recognition and authentication"
+version = "0.1.0"
+description = ""
+authors = ["LuAsm <lukas.asmontas@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+scikit-learn = "^1.2.2"
+keras = "^2.12.0"
+pandas = "^2.0.0"
+opencv-python = "^4.7.0.72"
+matplotlib = "^3.7.1"
+Pillow = "^9.5.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.22.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
