@@ -1,2 +1,5 @@
 .venv/
 datasets/
+data/
+ModelV3_t.pth
+alll_data.pickle
