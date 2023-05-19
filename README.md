@@ -7,7 +7,7 @@ All project is create with python and pytorch.
 Full eda and training you can find in folder "nootebooks" or here:
 <a href="https://colab.research.google.com/drive/1XoR7gu7Sjf2JWswpjFXVbz-WOhCOKBV2?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-For training i use LFWPeople pytorch dataset, so if you want you can run code easylie.
+For training i use LFWPeople pytorch dataset, so if you want you can run code easily.
 
 If you run code first time it's took some time. About 15min to create preproceeded dataset and about 15min to train model on cpu or about 1min on gpu.
 
