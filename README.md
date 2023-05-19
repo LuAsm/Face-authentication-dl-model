@@ -4,7 +4,8 @@ Capstone project with idea to make deep learning model which recognize people fa
 
 All project is create with python and pytorch. 
 
-Full eda and training you can find in folder "nootebooks"
+Full eda and training you can find in folder "nootebooks" or here:
+<a href="https://colab.research.google.com/drive/1XoR7gu7Sjf2JWswpjFXVbz-WOhCOKBV2?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 For training i use LFWPeople pytorch dataset, so if you want you can run code easylie.
 
