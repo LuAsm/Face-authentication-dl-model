@@ -4,3 +4,7 @@ data/
 ModelV3_t.pth
 alll_data.pickle
 alll_data_org.pickle
+ModelV3.pth
+ModelV3_org.pth
+ModifyModelV3.pth
+updated_model.pth
