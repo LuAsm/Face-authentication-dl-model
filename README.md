@@ -17,7 +17,11 @@ Code automaticly generate dataset and model, if you run it not first time it's j
 
 When you run flask, you got ip address, open it in chrome or some other and push "Load Random Image". This button upload 1 random image from test data to model and give us predict. After that press we will see random image and above that image prediction and truht names.
 
+Start screen:
+
 ![Start screen](images/1.png)
+
+After "Load Random Image":
 
 ![Load Random Image](images/2.png)
 
