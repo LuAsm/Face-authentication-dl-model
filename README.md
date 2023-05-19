@@ -17,9 +17,9 @@ Code automaticly generate dataset and model, if you run it not first time it's j
 
 When you run flask, you got ip address, open it in chrome or some other and push "Load Random Image". This button upload 1 random image from test data to model and give us predict. After that press we will see random image and above that image prediction and truht names.
 
-![Start screen](https://www.dropbox.com/s/7reqsfsb15joup1/1.png?dl=0)
+![Start screen](images/1.png)
 
-![Load Random Image](https://www.dropbox.com/s/17f1k6yqzxt9m5i/2.png?dl=0)
+![Load Random Image](images/2.png)
 
 Also i created option to train trained model with your images. When you open flask link push button "Upload Image for training" here pops up window where you can write your name and select your photos. Then upload your image for model testing after pushing "Upload Image for testing" and finally press "Load Test Image" to look what that model predict from your image.
 
