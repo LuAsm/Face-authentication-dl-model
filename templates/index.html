@@ -66,6 +66,9 @@
     </div>
     <div id="button-container">
         <button onclick="loadRandomImage()">Load Random Image</button>
+        <button onclick="uploadImagesWithText()">Upload Image for training</button>
+        <button onclick="upload_image_for_testing()">Upload Image for testing</button>
+        <button onclick="load_testImage()">Load Test Image</button>
     </div>
 
     <script>
@@ -74,6 +77,78 @@
             const randomQuery = `?rand=${Math.random()}`; // add random query parameter
             img.src = `/random_image${randomQuery}`;
             img.style.display = 'block';
+        }
+
+        function load_testImage() {
+            const img = document.getElementById('faceImage');
+            const randomQuery = `?rand=${Math.random()}`; // add random query parameter
+            img.src = `/testing_image${randomQuery}`;
+            img.style.display = 'block';
+        }
+
+        function upload_image_for_testing(){
+            const input = document.createElement('input');
+            input.type = 'file';
+
+            input.onchange = () => {
+                const file = input.files[0];
+                const formData = new FormData();
+                formData.append('image', file);
+
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/upload_image_for_testing', true);
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        console.log('Image uploaded successfully');
+                    } else {
+                        console.error('Error uploading image');
+                    }
+                };
+
+                xhr.send(formData);
+            };
+
+            input.click();
+
+        }
+
+        function uploadImagesWithText() {
+            const text = prompt('Enter folder name:');
+            if (text !== null) {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.multiple = true;
+
+                input.onchange = () => {
+                    const files = input.files;
+                    const formData = new FormData();
+                    for (let i = 0; i < files.length; i++) {
+                        formData.append('images', files[i]);
+                    }
+                    formData.append('folder_name', text);
+
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/upload_images', true);
+                    xhr.onload = () => {
+                        if (xhr.status === 200) {
+                            console.log('Images uploaded successfully');
+                        } else {
+                            console.error('Error uploading images');
+                        }
+                    };
+
+                    xhr.send(formData);
+                };
+
+                window.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        input.click();
+                    }
+                });
+
+                input.click();
+            }
         }
     </script>
 </body>
